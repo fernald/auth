@@ -59,5 +59,5 @@ jobs:
         with:
           app-name: 'clickauth'
           slot-name: 'Production'
-          package: ./deployment
+          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2556BC750FB84F2AAAC04F9B6D830700 }}
