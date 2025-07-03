@@ -3,6 +3,7 @@ import { AppProvider } from '@toolpad/core/AppProvider';
 import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles';
 
+
 const providers = [{ id: 'credentials', name: 'Email and password' }];
 
 const signIn = async (provider, formData) => {
@@ -27,15 +28,20 @@ const signIn = async (provider, formData) => {
 function Login() {
   const theme = useTheme();
   return (
-    // preview-start
+    <div>
+
     <AppProvider theme={theme}>
       <SignInPage
-        signIn={signIn}
+        signIn={signIn} 
         providers={providers}
         slotProps={{ emailField: { autoFocus: false } }}
       />
+      
     </AppProvider>
-    // preview-end
+    
+   
+    </div>
+    
   );
 }
 
